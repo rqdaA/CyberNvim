@@ -10,7 +10,7 @@ lsp.set_sign_icons({
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.foldingRange = {
-	dynamicRegistration = false,
+	dynamicRegistration = true,
 	lineFoldingOnly = true,
 }
 local exist, user_config = pcall(require, "user.user_config")

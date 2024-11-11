@@ -89,14 +89,14 @@ require("lazy").setup({
 			require("plugin-configs.neodev")
 		end,
 	},
-	{
-		"karb94/neoscroll.nvim",
-		cond = enabled(group, "neoscroll"),
-		event = "VeryLazy",
-		config = function()
-			require("plugin-configs.neoscroll")
-		end,
-	},
+	-- {
+	-- 	"karb94/neoscroll.nvim",
+	-- 	cond = enabled(group, "neoscroll"),
+	-- 	event = "VeryLazy",
+	-- 	config = function()
+	-- 		require("plugin-configs.neoscroll")
+	-- 	end,
+	-- },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		cond = enabled(group, "neotree"),
