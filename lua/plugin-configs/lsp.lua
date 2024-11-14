@@ -1,25 +1,25 @@
 local lsp = require("lsp-zero")
-lsp.preset("minimal")
+lsp.preset({})
 
 lsp.set_sign_icons({
-	error = "✘",
-	warn = "▲",
-	hint = "⚑",
-	info = "»",
+  error = "✘",
+  warn = "▲",
+  hint = "⚑",
+  info = "»",
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.foldingRange = {
-	dynamicRegistration = true,
-	lineFoldingOnly = true,
+  dynamicRegistration = true,
+  lineFoldingOnly = true,
 }
 local exist, user_config = pcall(require, "user.user_config")
 lsp.format_on_save({
-	format_opts = {
-		async = false,
-		timeout_ms = 10000,
-	},
-	servers = user_config.formatting_servers,
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = user_config.formatting_servers,
 })
 
 require("mason-lspconfig").setup({
