@@ -203,6 +203,11 @@ require("lazy").setup({
 	{
 		"rcarriga/nvim-notify",
 		cond = enabled(group, "notify"),
+    config = function ()
+      require("notify").setup({
+        background_colour = "#0000000"
+      })
+    end,
 		lazy = false,
 	},
 	{
