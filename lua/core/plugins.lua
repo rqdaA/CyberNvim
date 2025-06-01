@@ -247,6 +247,12 @@ require("lazy").setup({
 	{
 		"navarasu/onedark.nvim",
 		cond = enabled(group, "onedark"),
+		config = function()
+			require("onedark").setup({
+				style = "cool",
+				transparent = true,
+			})
+		end,
 	},
 	{ "nvim-lua/plenary.nvim" },
 	{

@@ -181,6 +181,9 @@ if enabled(group, "gitsigns") then
 		map("n", "<leader>td", gs.toggle_deleted, { desc = "toggle deleted line" })
 	end
 end
+map("n", "<C-m>", ":bnext<CR>", { desc = "Next buffer" })
+map("n", "<C-n>", ":bprevious<CR>", { desc = "Previous buffer" })
+map("n", "<leader>dd", ":bdelete<CR>", { desc = "Close buffer" })
 
 -- cmp (these are defined in cmp's configuration file)
 -- ["<C-j>"] = cmp.mapping.scroll_docs(-4),
